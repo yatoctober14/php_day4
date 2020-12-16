@@ -195,6 +195,60 @@
 	$sum = add4(50.5,10); //send 10.5 to get error 
 	echo "strict type argument and output: {$sum}<br>";
 	echo "<br>"	;
+	
+	
+	//global vs local
+	$num=55; //global
+	function setNum()
+	{
+		//global $num;
+		$num=1; //local
+		echo $num."<br>";
+	}
+	echo $num."<br>"; //55
+	setNum();//1
+	echo $num."<br>";//
+	
+	
+	//call by reference vs call by value
+	$num=55; 
+	function setNumByValue($n)
+	{ 
+		$n=1;
+		echo "from function {$n} <br>";
+	}
+	function setNumByrefrence(&$n) //call by reference
+	{ 
+		$n=1; //local
+		echo "from function {$n} <br>";
+	}
+	echo "first: {$num}<br>";//55
+	setNumByValue($num);//1
+	echo "second: {$num}<br>";//55 
+	setNumByrefrence($num);//1
+	echo "third: {$num}<br>";//1
+	
+	$num1=10; $num2=20;
+	
+	function swap(&$n1,&$n2)
+	{
+		$n3=$n1;
+		$n1=$n2;
+		$n2=$n3;
+		return array($n1,$n2);
+	}
+	echo "<br>";
+	echo "$num1,$num2<br>";//10,20
+	list($m1,$m2)=swap($num1,$num2);
+	echo "$m1,$m2<br>";//20,10
+	echo "$num1,$num2<br>";//20,10
+	
+	
+	
+
+	
+	
+
 
 
 
