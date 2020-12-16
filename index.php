@@ -77,6 +77,23 @@
 		$total = $student["arabic"] + $student["English"] + $student["Math"];
 		echo "{$student["name"]} has total: {$total} <br>" ;
 	}
+	
+	//break
+	foreach($students as $student)
+	{
+		if($student["arabic"]<25 || $student["English"]<25 || $student["Math"]<25)
+		{
+			continue;
+		}
+		if($student["name"] == "ahmed")
+		{
+			$total = $student["arabic"] + $student["English"] + $student["Math"];
+			echo "{$student["name"]} has total: {$total} <br>" ;
+			break;
+		}
+		
+	}
+
 
 
 
