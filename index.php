@@ -156,6 +156,22 @@
 	echo"the total divide is :$divide<br>";
 	echo"the total modulus is :$modulus<br>";
 	echo "<br>";
+	
+	FUNCTION addSubMulDivide2($num1=20, $num2=10)
+	{
+		$sum = $num1+$num2;
+		$sub = $num1-$num2;
+		$mul = $num1*$num2;
+		$divide = $num1/$num2;
+		return array($sum, $sub, $mul, $divide);
+	}
+	List($sum,$sub,$multiply,$divide) = addSubMulDivide2(50,25);
+	echo"the total sum is :$sum<br>";
+	echo"the total sub is :$sub<br>";
+	echo"the total multiply is :$multiply<br>";
+	echo"the total divide is :$divide<br>";
+	echo "<br>"
+	
 
 
 ?>
