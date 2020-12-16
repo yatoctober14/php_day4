@@ -122,12 +122,40 @@
 		$sum = $num1+$num2;
 		return $sum;
 	}
-	$sum = add("1",10);
-	echo $sum;
+	$total = add("1",10);
+	//echo"the total sum is :$total";
+	echo"the total sum is :".add("1",10);
 	echo "<br>";
 
 
-
+	//multiple values return
+	echo "<br>";
+	function addSubMulDivMod($num1, $num2)
+	{
+		$sum = $num1+$num2;
+		$sub = $num1-$num2;
+		$multiply = $num1*$num2;
+		$divide = $num1/$num2;
+		$modulus = $num1%$num2;
+		$results = [$sum,$sub,$multiply,$divide,$modulus];
+		return $results;
+	}
+	
+	$results = addSubMulDivMod("10",5);
+	echo"the total sum is :$results[0]<br>";
+	echo"the total sub is :$results[1]<br>";
+	echo"the total multiply is :$results[2]<br>";
+	echo"the total divide is :$results[3]<br>";
+	echo"the total modulus is :$results[4]<br>";
+	echo "<br>";
+	
+	List($sum,$sub,$multiply,$divide,$modulus) = addSubMulDivMod("10",5);
+	echo"the total sum is :$sum<br>";
+	echo"the total sub is :$sub<br>";
+	echo"the total multiply is :$multiply<br>";
+	echo"the total divide is :$divide<br>";
+	echo"the total modulus is :$modulus<br>";
+	echo "<br>";
 
 
 ?>
