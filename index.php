@@ -59,6 +59,16 @@
 			echo "{$user["name"]}, {$user["address"]}, {$user["age"]}<br>" ;
 	}
 	echo "<br>";
+	
+	//continue
+	$students = 
+	[
+		["name"=>"ahmed","arabic"=>50,"English"=>45,"Math"=>48],
+		["name"=>"mohamed","arabic"=>24,"English"=>20,"Math"=>48,],
+		["name"=>"mahmoud","arabic"=>48,"English"=>44,"Math"=>47,]
+		
+	];
+
 
 
 
