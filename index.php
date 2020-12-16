@@ -108,6 +108,24 @@
 	echo current($arr)."<br>";
 	echo reset($arr)."<br>";
 	echo current($arr)."<br>";
+	
+	echo "<br>";
+	//FUNCTION display(){echo"a";}
+	function display($to_print)
+	{echo $to_print;}
+	
+	display("ahmed");
+	
+	echo "<br>";
+	function add($num1, $num2)
+	{
+		$sum = $num1+$num2;
+		return $sum;
+	}
+	$sum = add("1",10);
+	echo $sum;
+	echo "<br>";
+
 
 
 
