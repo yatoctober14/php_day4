@@ -1,4 +1,5 @@
-<?php 
+<?php
+	declare(strict_types=1); // should be the first line
 
 	for($i=0;$i<10;$i++)
 	{
@@ -165,13 +166,37 @@
 		$divide = $num1/$num2;
 		return array($sum, $sub, $mul, $divide);
 	}
-	List($sum,$sub,$multiply,$divide) = addSubMulDivide2(50,25);
+	List($sum,$sub,$multiply,$divide) = addSubMulDivide2("75",50);
 	echo"the total sum is :$sum<br>";
 	echo"the total sub is :$sub<br>";
 	echo"the total multiply is :$multiply<br>";
 	echo"the total divide is :$divide<br>";
-	echo "<br>"
+	echo "<br>";
 	
+	
+	
+	//stricting type
+	//arguments
+	FUNCTION add3(float $num1,float $num2)
+	{
+		return $num1+$num2;
+	}
+	//$sum = add3("1",10); //get error
+	$sum = add3(50.5,10); 
+	echo "strict type argument: {$sum}<br>";
+	echo "<br>"	;
+	
+	//stricting type 
+	//return
+	FUNCTION add4(float $num1,int $num2):int
+	{
+		return (integer)$num1+$num2;
+	}
+	$sum = add4(50.5,10); //send 10.5 to get error 
+	echo "strict type argument and output: {$sum}<br>";
+	echo "<br>"	;
+
+
 
 
 ?>
